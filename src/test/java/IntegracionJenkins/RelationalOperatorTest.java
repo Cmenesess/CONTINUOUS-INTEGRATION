@@ -93,7 +93,7 @@ public class RelationalOperatorTest {
 		System.setOut(new PrintStream(outContent));
 		RelationalOperator tester = new RelationalOperator();
 		tester.goodHeight(6, 5, 7);
-		assertEquals("The heigth is correct", outContent.toString().trim());
+		assertEquals("The height is correct", outContent.toString().trim());
 		System.setOut(originalOut);
 	}
 
@@ -102,7 +102,7 @@ public class RelationalOperatorTest {
 		System.setOut(new PrintStream(outContent));
 		RelationalOperator tester = new RelationalOperator();
 		tester.goodHeight(4, 2, 3);
-		assertEquals("The heigth is INCORRECT", outContent.toString().trim());
+		assertEquals("The height is INCORRECT", outContent.toString().trim());
 		System.setOut(originalOut);
 	}
 
@@ -111,7 +111,7 @@ public class RelationalOperatorTest {
 		System.setOut(new PrintStream(outContent));
 		RelationalOperator tester = new RelationalOperator();
 		tester.goodHeight(5, 5, 7);
-		assertEquals("The heigth is INCORRECT", outContent.toString().trim());
+		assertEquals("The height is INCORRECT", outContent.toString().trim());
 		System.setOut(originalOut);
 	}
 }
