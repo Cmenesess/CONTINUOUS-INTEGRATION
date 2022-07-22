@@ -1,4 +1,4 @@
-ackage IntegracionJenkins;
+package IntegracionJenkins;
 
 import static org.junit.Assert.*;
 
