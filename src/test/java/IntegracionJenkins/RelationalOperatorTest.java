@@ -1,23 +1,43 @@
-package IntegracionJenkins;
+ackage IntegracionJenkins;
 
 import static org.junit.Assert.*;
+
+import java.beans.Transient;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 import org.junit.Test;
 
 public class RelationalOperatorTest {
+
+	/*
+	private final PrintStream standardOut = System.out;
+	private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+	 * @BeforeEach
+	 * public void setUp() {
+	 * System.setOut(new PrintStream(outputStreamCaptor));
+	 * }
+	 * 
+	 * @AfterEach
+	 * public void tearDown() {
+	 * System.setOut(standardOut);
+	 * }
+	 */
+
+	private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	private PrintStream originalOut = System.out;
 
 	@Test
 	public void isGreaterTest1() {
 		RelationalOperator tester = new RelationalOperator();
 		assertFalse(tester.isGreater(2, 3));
 	}
-	
+
 	@Test
 	public void isGreaterTest2() {
 		RelationalOperator tester = new RelationalOperator();
 		assertTrue(tester.isGreater(2, 1));
 	}
-	
 	@Test
 	public void isGreaterTest3() {
 		RelationalOperator tester = new RelationalOperator();
@@ -29,7 +49,7 @@ public class RelationalOperatorTest {
 		RelationalOperator tester = new RelationalOperator();
 		assertTrue(tester.isLess(4, 5));
 	}
-	
+
 	@Test
 	public void isLessTest2() {
 		RelationalOperator tester = new RelationalOperator();
